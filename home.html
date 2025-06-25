@@ -79,9 +79,7 @@
         .main-content-wrapper {
             flex-grow: 1;
             width: 100%;
-            /* max-width: 800px; - Eliminado para que el hero section ocupe todo el ancho */
             margin: 0 auto;
-            /* padding: 20px; - Eliminado, el padding estará dentro de las secciones */
             box-sizing: border-box;
         }
 
@@ -93,19 +91,6 @@
             padding: 25px;
             margin-bottom: 20px;
             max-width: 800px; /* Para mantener el contenido principal centrado */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Estilos para el logo en páginas específicas (Home, Auth) */
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            max-width: 400px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -199,12 +184,20 @@
             margin-right: auto;
         }
 
-        /* Botón flotante de WhatsApp */
-        .whatsapp-button {
+        /* Contenedor para los botones flotantes de redes sociales */
+        .social-buttons-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25D366; /* Color de WhatsApp */
+            display: flex;
+            flex-direction: column; /* Apilar verticalmente */
+            gap: 10px; /* Espacio entre botones */
+            z-index: 1000;
+        }
+
+        /* Estilo base para todos los botones de redes sociales */
+        .social-button {
+            background-color: #25D366; /* Color de WhatsApp por defecto */
             color: white;
             border-radius: 50%;
             width: 60px;
@@ -214,15 +207,43 @@
             align-items: center;
             font-size: 2em;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            text-decoration: none; /* Asegura que no tenga subrayado */
+            text-decoration: none;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .whatsapp-button:hover {
+        .social-button:hover {
             transform: scale(1.1);
+        }
+
+        /* Colores específicos para cada red social */
+        .social-button.whatsapp {
+            background-color: #25D366;
+        }
+        .social-button.whatsapp:hover {
             background-color: #1DA851;
         }
+
+        .social-button.facebook {
+            background-color: #3b5998; /* Azul de Facebook */
+        }
+        .social-button.facebook:hover {
+            background-color: #2d4373;
+        }
+
+        .social-button.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); /* Degradado de Instagram */
+        }
+        .social-button.instagram:hover {
+            filter: brightness(1.1); /* Ligeramente más brillante al pasar el ratón */
+        }
+
+        .social-button.tiktok {
+            background-color: #000000; /* Negro de TikTok */
+        }
+        .social-button.tiktok:hover {
+            background-color: #333333;
+        }
+
 
         /* Estilos para servicios/productos y testimonios (se mantienen en sus propios archivos HTML) */
         .service-item {
@@ -331,9 +352,27 @@
         <!-- Por ahora, las secciones completas están en sus propios archivos HTML -->
     </div>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/TU_NUMERO_WHATSAPP" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">
-        &#x1F4AC; <!-- Icono de burbuja de diálogo, podrías usar un icono de WhatsApp real si lo añades a tu CSS -->
-    </a>
+    <!-- Contenedor para todos los botones flotantes de redes sociales -->
+    <div class="social-buttons-container">
+        <!-- Botón flotante de WhatsApp -->
+        <a href="https://wa.me/TU_NUMERO_WHATSAPP" target="_blank" class="social-button whatsapp" aria-label="Contactar por WhatsApp">
+            &#x1F4AC; <!-- Icono de burbuja de diálogo -->
+        </a>
+        <!-- Botón flotante de Facebook -->
+        <a href="https://www.facebook.com/TU_PAGINA_FACEBOOK" target="_blank" class="social-button facebook" aria-label="Visitar Facebook">
+            &#x1F4F1; <!-- Icono de teléfono móvil, para representar Facebook -->
+            <!-- Puedes usar &#x1F4D3; (Libro abierto) o simplemente 'F' -->
+        </a>
+        <!-- Botón flotante de Instagram -->
+        <a href="https://www.instagram.com/TU_USUARIO_INSTAGRAM" target="_blank" class="social-button instagram" aria-label="Visitar Instagram">
+            &#x1F3A5; <!-- Icono de cámara de vídeo, para representar Instagram -->
+            <!-- Puedes usar &#x1F4F7; (Cámara de fotos) o simplemente 'I' -->
+        </a>
+        <!-- Botón flotante de TikTok -->
+        <a href="https://www.tiktok.com/@TU_USUARIO_TIKTOK" target="_blank" class="social-button tiktok" aria-label="Visitar TikTok">
+            &#x1F3C3; <!-- Icono de persona corriendo, para representar TikTok (danza) -->
+            <!-- Podrías usar &#x1F3B6; (Nota musical) o simplemente 'T' -->
+        </a>
+    </div>
 </body>
 </html>
