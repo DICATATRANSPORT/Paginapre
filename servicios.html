@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICATA - Servicios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* URL para el fondo de la página - ¡REEMPLAZA ESTA URL CON TU IMAGEN REAL! */
+            background-image: url('https://placehold.co/1920x1080/E0E0E0/333333?text=Fondo+de+Pagina+Aqui');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- ESTILOS PARA LA FRANJA SUPERIOR (HEADER) --- */
+        .top-nav {
+            background-color: white; /* Color de fondo blanco */
+            color: #051FA6; /* Color de texto azul para elementos predeterminados */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        .nav-left-section {
+            flex-shrink: 0;
+        }
+        
+        .nav-logo-container a {
+            display: block;
+        }
+
+        .nav-company-logo {
+            height: 40px;
+            width: auto;
+            display: block;
+            /* URL para el logo en la barra de navegación - ¡REEMPLAZA ESTA URL CON TU LOGO REAL! */
+            content: url('https://placehold.co/100x40/E0E0E0/333333?text=LOGO');
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            color: #051FA6; /* Color de texto azul para los enlaces del menú */
+            text-decoration: none;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-menu a:hover {
+            color: #007bff;
+        }
+        
+        /* Contenedor principal de todo el contenido debajo del header */
+        .main-content-wrapper {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales para contenedores de sección */
+        .section-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* --- ESTILOS PARA LAS SECCIONES DE CONTENIDO --- */
+        .content-section {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-section h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .content-section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .secondary-button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .secondary-button:hover { background: #5a6268; }
+
+        /* Estilos específicos para servicios/productos */
+        .service-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+
+        .service-item h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .service-item .price {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- FRANJA SUPERIOR (HEADER) -->
+    <header class="top-nav">
+        <div class="nav-left-section">
+            <div class="nav-logo-container">
+                <a href="home.html">
+                    <img src="LOGODICATA.png" alt="Logo Ducata" class="nav-company-logo">
+                </a>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="index.html">Login QR</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal del contenido -->
+    <div class="main-content-wrapper">
+        <div id="servicesPage" class="section-container content-section">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos una suite de servicios diseñados para mantener tu flota en movimiento:</p>
+
+            <div class="service-item">
+                <h3>Sistema de Seguimiento QR</h3>
+                <p>Nuestra plataforma principal permite a tus técnicos escanear un código QR en cada camión para acceder instantáneamente a su historial de mantenimiento y registrar nuevas intervenciones. Facilita la toma de decisiones y mejora la eficiencia en campo.</p>
+                <div class="price">Precio: Solicitar cotización personalizada</div>
+                <!-- IMAGEN DE SERVICIO - ¡REEMPLAZA ESTA URL CON TU IMAGEN REAL! -->
+                <img src="https://placehold.co/400x200/cccccc/333333?text=Sistema+QR" alt="Sistema de Seguimiento QR">
+            </div>
+
+            <div class="service-item">
+                <h3>Alertas de Mantenimiento Automatizadas</h3>
+                <p>Recibe notificaciones automáticas por correo electrónico sobre los próximos mantenimientos de tus camiones, o si una fecha de servicio ha sido superada. Nunca más te perderás un servicio crítico.</p>
+                <div class="price">Precio: Incluido en el plan base</div>
+                <!-- IMAGEN DE SERVICIO - ¡REEMPLAZA ESTA URL CON TU IMAGEN REAL! -->
+                <img src="https://placehold.co/400x200/cccccc/333333?text=Alertas+Automatizadas" alt="Alertas de Mantenimiento">
+            </div>
+
+            <div class="service-item">
+                <h3>Generación de Reportes Personalizados</h3>
+                <p>Accede a reportes detallados sobre el historial de cada camión, kilometraje, tipos de mantenimiento realizados y desempeño de la flota. Obtén información valiosa para optimizar tus operaciones.</p>
+                <div class="price">Precio: Plan Premium</div>
+                <!-- IMAGEN DE SERVICIO - ¡REEMPLAZA ESTA URL CON TU IMAGEN REAL! -->
+                <img src="https://placehold.co/400x200/cccccc/333333?text=Reportes" alt="Reportes Personalizados">
+            </div>
+            
+            <button class="secondary-button" onclick="window.location.href='home.html'">Volver al Inicio</button>
+        </div>
+    </div>
+</body>
+</html>
